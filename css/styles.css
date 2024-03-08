@@ -84,10 +84,24 @@ img {
     letter-spacing: 0.02em;
     padding-top: 24px;   
 }
+.current {
+position: relative;
+}
+.current::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background: #404bbf;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+}
 .menu-link {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -115,6 +129,7 @@ img {
         display: block;
         padding-top: 24px;
         padding-bottom: 24px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
@@ -125,11 +140,18 @@ img {
 /*======== Hero section ========*/
 .hero {
     background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/hero/hero-bg.jpg);
+    background-size: cover;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 188px 0;
 }
 .hero-container {
     max-width: 100%;    
-    margin: 0;    
+    margin: 0;  
+
 }
  .title {
     text-align: center;
@@ -201,6 +223,15 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+.icon {
+    display: block;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+}
+
 /* ======== /Advant section ======== */
 
 /* ======== Team section ======== */
@@ -253,6 +284,29 @@ padding: 120px 0;
 .team-name-dscr {
     padding: 32px 0;
 }
+.social-links {
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;    
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #f4f4fd;
+}
+.social-list-link:hover,
+.social-list-link:focus {
+background-color: #404bbf;
+}
+
+
 /* ======== /Team section ======== */
 
 /* ======== Portfolio section ======== */
@@ -278,8 +332,9 @@ padding: 120px 0;
 }
 
 .portfolio-list-item {
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 48px) / 3);    
 }
+
 .portfolio-list-name {
     font-weight: 500;
     font-size: 20px;
@@ -300,6 +355,32 @@ padding: 120px 0;
     border-left: 1px solid #e7e9fc;
     border-right: 1px solid #e7e9fc;
 }
+.portfolio-img {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-img:hover .portfolio-overlay {
+    transform: translateY(0%);
+}
+.portfolio-overlay {
+   transform: translateY(100%); 
+   transform: translate 250ms liniar;
+    padding-top: 40px;
+    transition: 250ms ;
+    padding-left: 32px;
+    padding-right: 32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4d5ae5;
+    color: #f4f4fd;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
 /* ======== /Portfolio section ======== */
 
 /* ======== Footer ======== */
@@ -307,6 +388,7 @@ padding: 120px 0;
     background-color: #2e2f42;
     display: block;
     padding: 100px 0 100px;
+    
 }
 .logo-footer-part{
     color: #f4f4fd;
@@ -325,6 +407,26 @@ padding: 120px 0;
 .contacts-dscr {
     margin-top: 16px;
     max-width: 264px;
+}
+.contacts-text-media {
+display: flex;
+flex-wrap: wrap;
+    column-gap: 120px;
+}
+.social-media-title {
+margin-bottom: 16px;
+}
+.social-media {
+   display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;    
+}
+.social-media .social-list-link:hover,
+.social-media .social-list-link:focus {
+    background-color: #31d0aa;
 }
 
 /* ======== Footer ======== */
