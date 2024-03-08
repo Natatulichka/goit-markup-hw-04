@@ -85,12 +85,10 @@ img {
     letter-spacing: 0.02em;
     padding-top: 24px;   
 }
-.menu-link .current {
-    color: #404bbf;
-}
 
 .current {
 position: relative;
+color: #404bbf;
 }
 .current::after{
     content: "";
@@ -379,7 +377,7 @@ background-color: #404bbf;
 }
 .portfolio-overlay {
    transform: translateY(100%); 
-   transform: translate 250ms liniar;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px 32px;
     transition: 250ms ;
     line-height: 1.5;
@@ -425,7 +423,7 @@ display: flex;
 align-items: baseline;
 }
  
-}
+
 .contacts-text {
     margin-right: 120px;
 }
