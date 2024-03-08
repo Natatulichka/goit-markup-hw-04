@@ -44,7 +44,8 @@ img {
 
 /*======== Header ========*/
 .page-header {
-    border-bottom: 1px solid #e7e9fc;
+    border-bottom: 1px solid #e7e9fc;  
+    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-nav {
     display: flex;  
@@ -69,7 +70,7 @@ img {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #4d5ae5;
-        margin-right: 76px;
+        margin-right: 76px;        
 }
 
 .logo-part {
@@ -86,6 +87,7 @@ img {
 }
 .current {
 position: relative;
+color: #404bbf;
 }
 .current::after{
     content: "";
@@ -147,6 +149,8 @@ position: relative;
     margin-left: auto;
     margin-right: auto;
     padding: 188px 0;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .hero-container {
     max-width: 100%;    
@@ -178,7 +182,7 @@ position: relative;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .button-link:hover,
  .button-link:focus {
@@ -223,8 +227,10 @@ position: relative;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-.icon {
-    display: block;
+.advant-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
     border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
@@ -286,7 +292,7 @@ padding: 120px 0;
 }
 .social-links {
     display: flex;
-    column-gap: 24px;
+    gap: 24px;
     justify-content: center;
     padding-top: 8px;
 }
@@ -294,12 +300,13 @@ padding: 120px 0;
 .social-list-link {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
     width: 40px;    
     height: 40px;
     border-radius: 50%;
     background-color: #4d5ae5;
     fill: #f4f4fd;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -332,7 +339,8 @@ background-color: #404bbf;
 }
 
 .portfolio-list-item {
-    width: calc((100% - 48px) / 3);    
+    width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-name {
@@ -361,6 +369,7 @@ background-color: #404bbf;
 }
 .portfolio-img:hover .portfolio-overlay {
     transform: translateY(0%);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-overlay {
    transform: translateY(100%); 
@@ -388,7 +397,7 @@ background-color: #404bbf;
     background-color: #2e2f42;
     display: block;
     padding: 100px 0 100px;
-    
+    align-items: baseline;
 }
 .logo-footer-part{
     color: #f4f4fd;
@@ -410,19 +419,24 @@ background-color: #404bbf;
 }
 .contacts-text-media {
 display: flex;
-flex-wrap: wrap;
-    column-gap: 120px;
+ 
 }
-.social-media-title {
+.contact-text {
+    margin-right: 120px;
+}
+.social-media-dscr {
 margin-bottom: 16px;
-}
-.social-media {
-   display: block;
-    font-weight: 500;
+font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #fff;    
+    color: #fff;
+}
+.social-media {
+   display: block;
+}
+.social-media .social-links {
+    gap: 16px;
 }
 .social-media .social-list-link:hover,
 .social-media .social-list-link:focus {
