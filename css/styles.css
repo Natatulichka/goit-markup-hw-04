@@ -369,8 +369,7 @@ background-color: #404bbf;
     overflow: hidden;
     
 }
-.portfolio-list-item:hover .portfolio-overlay 
-.portfolio-list-item:focus .portfolio-overlay{
+.portfolio-list-item:hover .portfolio-overlay {
     transform: translateY(0%);    
 }
 .portfolio-list-item:hover,
